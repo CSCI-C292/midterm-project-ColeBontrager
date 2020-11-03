@@ -36,7 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Clock.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\LevelBarrier.cs" />
+     <Compile Include="Assets\Pillow.cs" />
+     <Compile Include="Assets\RuntimeData.cs" />
+     <Compile Include="Assets\Shadow.cs" />
+     <Compile Include="Assets\ShadowSpawner.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
