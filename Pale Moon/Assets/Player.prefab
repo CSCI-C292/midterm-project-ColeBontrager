@@ -100,7 +100,7 @@ MonoBehaviour:
   _moveSpeed: 200
   _fallSpeed: -1
   _jumpForce: 500
-  _pillowForce: 450
+  _pillowForce: 550
   _throwForce: 400
   _runtimeData: {fileID: 11400000, guid: 423f33cab6eed8a4092fa7a8d4c17c12, type: 2}
   platformLayer:

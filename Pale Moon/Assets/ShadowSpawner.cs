@@ -8,13 +8,14 @@ public class ShadowSpawner : MonoBehaviour
     [SerializeField] RuntimeData _runtimeData;
 
     private bool spawning = false;
+
+    private float timeRemaining = 2;
     
     void Update()
     {
-        
-        if(_runtimeData.spawnShadows && !spawning)
+        timeRemaining = timeRemaining - Time.deltaTime;
+        if((_runtimeData.spawnShadows || timeRemaining <= 0) && !spawning)
         {
-            
             InvokeRepeating("SpawnShadow", 0, 3);
             spawning = true;
         }

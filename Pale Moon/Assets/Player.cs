@@ -21,9 +21,15 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
 
     BoxCollider2D bc;
+
+    void Awake()
+    {
+        Reset();
+    }
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         
@@ -117,16 +123,17 @@ public class Player : MonoBehaviour
         }
         if(col == "Shadow(Clone)" || spikes)
         {
+            Reset();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            _runtimeData.ClocksRemaining = 0;
-            _runtimeData.playerMovements = new List<Vector3>();
-            _runtimeData.spawnShadows = false;
+            
         }
     }
 
-    void OnDeath()
+    void Reset()
     {
-
+        _runtimeData.ClocksRemaining = 0;
+        _runtimeData.playerMovements = new List<Vector3>();
+        _runtimeData.spawnShadows = false;
     }
     void OnCollisionEnter2D(Collision2D collider)
     {

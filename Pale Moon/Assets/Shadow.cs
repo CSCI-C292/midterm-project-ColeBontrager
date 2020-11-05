@@ -24,6 +24,7 @@ public class Shadow : MonoBehaviour
         {
             
             Vector3 newPos = _runtimeData.playerMovements[index];
+            
             transform.position = newPos;
             index++;
             
